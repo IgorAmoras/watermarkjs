@@ -461,6 +461,9 @@
          */
 
         function decode(base64) {
+          if (!window) {
+            throw Error("Window is not defined");
+          }
           return window.atob(base64);
         }
         /**
