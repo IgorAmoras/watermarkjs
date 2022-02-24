@@ -7,7 +7,7 @@
   else if (typeof define === "function" && define.amd) define([], factory);
   else if (typeof exports === "object") exports["watermark"] = factory();
   else root["watermark"] = factory();
-})(window, function () {
+})(typeof window !== "undefined" ? window : null, function () {
   if (!window) {
     return function (modules) {};
   }
