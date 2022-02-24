@@ -8,6 +8,9 @@
   else if (typeof exports === "object") exports["watermark"] = factory();
   else root["watermark"] = factory();
 })(window ? window : null, function () {
+  if (!window) {
+    return function (modules) {};
+  }
   return /******/ (function (modules) {
     // webpackBootstrap
     /******/ // The module cache
